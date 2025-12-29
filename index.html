@@ -5,32 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iz and Chaz - General Services</title>
 
+  <!-- Domain -->
   <link rel="canonical" href="https://www.izandchazgeneralservices.org/">
-  <meta name="description" content="Iz and Chaz General Services - Reliable, affordable general services.">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: #333;
       background-color: #ffffff;
+      color: #333;
     }
 
+    /* Header */
     header {
       background-color: #007bff;
       color: white;
-      padding: 30px 20px;
+      padding: 25px 15px;
       text-align: center;
     }
 
     header img {
-      max-width: 140px;
-      margin-bottom: 15px;
+      max-width: 180px;
+      display: block;
+      margin: 0 auto 15px;
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 12px;
       text-decoration: none;
       font-weight: bold;
     }
@@ -39,196 +44,10 @@
       text-decoration: underline;
     }
 
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    /* SERVICES */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .service-card {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 25px;
-      text-align: center;
-      background: #f9f9f9;
-    }
-
-    .service-card span {
-      font-size: 2.5em;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .price {
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #007bff;
-      margin: 10px 0;
-    }
-
-    /* CONTACT FORM */
-    #contactForm {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    #contactForm input,
-    #contactForm textarea {
-      padding: 12px;
+    .contact-top {
+      margin-top: 10px;
       font-size: 1em;
-      border-radius: 6px;
-      border: 1px solid #ccc;
     }
 
-    #contactForm button {
-      padding: 14px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-
-    #contactForm button:hover {
-      background-color: #0056b3;
-    }
-
-    #successMessage {
-      display: none;
-      color: green;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    footer {
-      background-color: #f4f4f4;
-      padding: 20px;
-      text-align: center;
-      margin-top: 60px;
-    }
-
-    .contact-info a {
-      color: #007bff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <img src="image0.png" alt="Iz and Chaz Logo">
-  <h1>Iz and Chaz – General Services</h1>
-
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <p class="contact-info">
-    📧 <a href="mailto:izandchazgs@icloud.com">izandchazgs@icloud.com</a> |
-    📞 <a href="tel:07496846263">07496846263</a>
-  </p>
-</header>
-
-<main>
-
-<section id="services">
-  <h2>Our Services</h2>
-
-  <div class="services-grid">
-
-    <div class="service-card">
-      <span>🔧</span>
-      <h3>Basic Service</h3>
-      <div class="price">£25.00</div>
-      <p>Small Jobs<br>Approx 25–45 mins</p>
-    </div>
-
-    <div class="service-card">
-      <span>🛠️</span>
-      <h3>Intermediate Service</h3>
-      <div class="price">£50.00</div>
-      <p>Casual Jobs<br>Approx 45–90 mins</p>
-    </div>
-
-    <div class="service-card">
-      <span>⚙️</span>
-      <h3>Advanced Service</h3>
-      <div class="price">£75.00</div>
-      <p>Difficult Jobs<br>Approx 90–120 mins</p>
-    </div>
-
-    <div class="service-card">
-      <span>🏗️</span>
-      <h3>Advanced+ Service</h3>
-      <div class="price">£115.00</div>
-      <p>Day Jobs<br>Approx 120–180 mins</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="contact" style="background-color:#f4f4f4;">
-  <h2>Contact Us</h2>
-  <p style="text-align:center;">Send us a message and we’ll get back to you.</p>
-
-  <form id="contactForm" action="https://formspree.io/f/mbdjwkeq" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="_replyto" placeholder="Your Email" required>
-    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-    <p id="successMessage">Thank you! Your message has been sent.</p>
-  </form>
-</section>
-
-</main>
-
-<footer>
-  <p>&copy; 2025 Iz and Chaz General Services</p>
-</footer>
-
-<script>
-  const form = document.getElementById('contactForm');
-  const successMessage = document.getElementById('successMessage');
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const data = new FormData(form);
-
-    fetch(form.action, {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        form.reset();
-        successMessage.style.display = 'block';
-      } else {
-        alert('Submission failed.');
-      }
-    });
-  });
-</script>
-
-</body>
-</html>
+    .contact-top a {
+      color: #
