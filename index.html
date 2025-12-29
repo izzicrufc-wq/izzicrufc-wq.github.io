@@ -1,53 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Iz and Chaz - General Services</title>
 
-  <!-- Domain -->
-  <link rel="canonical" href="https://www.izandchazgeneralservices.org/">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Your domain -->
+  <link rel="canonical" href="https://www.izandchazgeneralservices.org/" />
+  <meta name="description" content="Iz and Chaz General Services - Professional services for your home and business." />
 
   <style>
-    body {
-      margin: 0;
+    :root{
+      --brand:#007bff;
+      --brand-dark:#0056b3;
+      --bg:#ffffff;
+      --muted:#f4f4f4;
+      --text:#222;
+      --sub:#555;
+      --card:#ffffff;
+      --border:#e6e6e6;
+      --shadow: 0 10px 25px rgba(0,0,0,.08);
+      --radius:16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body{
+      margin:0;
       font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #333;
+      background: var(--bg);
+      color: var(--text);
     }
 
     /* Header */
-    header {
-      background-color: #007bff;
-      color: white;
-      padding: 25px 15px;
-      text-align: center;
+    header{
+      background: linear-gradient(135deg, var(--brand), #2f8bff);
+      color:#fff;
+      padding: 22px 16px;
+      text-align:center;
     }
 
-    header img {
-      max-width: 180px;
-      display: block;
-      margin: 0 auto 15px;
+    .brand-wrap{
+      max-width: 1000px;
+      margin: 0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
-    nav a {
-      color: white;
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: bold;
+    .logo{
+      width: 68px;
+      height: 68px;
+      border-radius: 14px;
+      object-fit: cover;
+      background: rgba(255,255,255,.18);
+      box-shadow: 0 8px 18px rgba(0,0,0,.18);
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    h1{
+      margin: 0;
+      font-size: 1.6rem;
+      line-height: 1.2;
     }
 
-    .contact-top {
+    .tagline{
+      margin: 6px 0 0;
+      opacity: .95;
+      font-size: 1.02rem;
+    }
+
+    nav{
+      margin-top: 14px;
+      display:flex;
+      justify-content:center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:bold;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.18);
+    }
+    nav a:hover{ background: rgba(255,255,255,.22); }
+
+    .contact-strip{
+      margin-top: 12px;
+      display:flex;
+      justify-content:center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 1.02rem;
+    }
+    .contact-strip a{
+      color:#fff;
+      text-decoration:none;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.12);
+      border: 1px solid rgba(255,255,255,.16);
+    }
+    .contact-strip a:hover{ background: rgba(0,0,0,.18); }
+
+    /* Layout */
+    main{
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 26px 16px 60px;
+    }
+
+    section{
+      margin-top: 18px;
+      padding: 26px 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 6px 16px rgba(0,0,0,.04);
+    }
+
+    section h2{
+      margin: 0 0 10px;
+      font-size: 1.75rem;
+    }
+
+    .subtext{
+      margin: 0 0 14px;
+      color: var(--sub);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* Services cards */
+    .services-grid{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .service-card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 16px 14px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow:hidden;
+    }
+
+    .service-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: radial-gradient(900px 200px at 50% -50%, rgba(0,123,255,.22), transparent 55%);
+      pointer-events:none;
+    }
+
+    .service-top{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .icon{
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display:grid;
+      place-items:center;
+      background: rgba(0,123,255,.12);
+      border: 1px solid rgba(0,123,255,.18);
+      font-size: 22px;
+      flex: 0 0 auto;
+    }
+
+    .service-title{
+      margin:0;
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
+
+    .price{
+      margin: 10px 0 8px;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--brand);
+      position: relative;
+    }
+
+    .desc{
+      margin:0;
+      color: var(--sub);
+      line-height: 1.55;
+      font-size: 1.02rem;
+      position: relative;
+    }
+
+    .pill{
+      display:inline-block;
+      margin-top: 12px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.05);
+      border: 1px solid rgba(0,0,0,.06);
+      color: #333;
+      font-weight: 700;
+      font-size: .95rem;
+      position: relative;
+    }
+
+    /* Contact form */
+    #contact{
+      background: var(--muted);
+      border: none;
+      box-shadow: none;
+    }
+
+    .contact-box{
+      background:#fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      max-width: 640px;
+      margin: 14px auto 0;
+    }
+
+    #contactForm{
+      display:flex;
+      flex-direction: column;
+      gap: 14px;
+      text-align:left;
       margin-top: 10px;
-      font-size: 1em;
     }
 
-    .contact-top a {
-      color: #
+    #contactForm input,
+    #contactForm textarea{
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      font-size: 1rem;
+      width: 100%;
+      outline: none;
+    }
+    #contactForm input:focus,
+    #contactForm textarea:focus{
+      border-color: rgba(0,123,255,.6);
+      box-shadow: 0 0 0 4px rgba(0,123,255,.15);
+    }
+
+    #contactForm button{
+      padding: 13px 14px;
+      background: var(--brand);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background-color .2s ease;
+    }
+    #contactForm button:hover{ background: var(--brand-dark); }
+
+    #successMessage{
+      display:none;
+      margin: 6px 0 0;
+      color: #1b7f2a;
+      font-weight: 900;
+    }
+
+    footer{
+      text-align:center;
+      padding: 22px 12px;
+      color: #666;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .services-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px){
+      h1{ font-size: 1.35rem; }
+      .logo{ width: 58px; height: 58px; }
+      .services-grid{ grid-template-columns: 1fr; }
+      section{ padding: 22px 14px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand-wrap">
+      <!-- Logo file must be in the SAME folder as index.html -->
+      <img class="logo" src="image0.png" alt="Iz and Chaz logo" />
+      <div>
+        <h1>Welcome to Iz and Chaz - General Services!</h1>
+        <p class="tagline">Reliable help for small jobs, casual jobs, difficult jobs & day jobs.</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="contact-strip">
+      <a href="mailto:izandchazgs@icloud.com">izandchazgs@icloud.com</a>
+      <a href="tel:07496846263">07496846263</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="services">
+      <h2>Services & Pricing</h2>
+      <p class="subtext">Choose the service level that fits your job. If you’re not sure, send us a message and we’ll advise.</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-top">
+            <div class="icon">🧰</div>
+            <h3 class="service-title">Basic Service</h3>
+          </div>
+          <div class="price">£25.00</div>
+          <p class="desc">Small Jobs: approx 25–45 mins completion time</p>
+          <span class="pill">Quick tasks</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-top">
+            <div class="icon">🛠️</div>
+            <h3 class="service-title">Intermediate Service</h3>
+          </div>
+          <div class="price">£50.00</div>
+          <p class="desc">Casual Jobs: Completion time approx 45–90 mins</p>
+          <span class="pill">Most common</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-top">
+            <div class="icon">🏗️</div>
+            <h3 class="service-title">Advanced Service</h3>
+          </div>
+          <div class="price">£75.00</div>
+          <p class="desc">Difficult Jobs: Completion time 90–120 mins</p>
+          <span class="pill">Complex work</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-top">
+            <div class="icon">📅</div>
+            <h3 class="service-title">Advanced+ Service</h3>
+          </div>
+          <div class="price">£115.00</div>
+          <p class="desc">Day Jobs: Completion time 120–180 mins</p>
+          <span class="pill">Bigger jobs</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p class="subtext">
+        Iz and Chaz General Services is here to make life easier — we handle the jobs you don’t have time for.
+        Friendly, reliable, and professional service every time.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2 style="text-align:center; margin-bottom: 8px;">Contact Us</h2>
+      <p class="subtext" style="text-align:center; margin-bottom: 0;">
+        Email us, call us, or use the form below and we’ll get back to you.
+      </p>
+
+      <div class="contact-box">
+        <p class="subtext" style="text-align:center; margin: 0 0 10px;">
+          <strong>Email:</strong> <a href="mailto:izandchazgs@icloud.com">izandchazgs@icloud.com</a>
+          &nbsp;•&nbsp;
+          <strong>Phone:</strong> <a href="tel:07496846263">07496846263</a>
+        </p>
+
+        <form id="contactForm" action="https://formspree.io/f/mbdjwkeq" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="_replyto" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+          <button type="submit">Send Message</button>
+          <p id="successMessage">Thank you! Your message has been sent.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Iz and Chaz General Services</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          form.reset();
+          successMessage.style.display = 'block';
+        } else {
+          alert('Oops! There was a problem submitting your form.');
+        }
+      }).catch(() => {
+        alert('Oops! There was a problem submitting your form.');
+      });
+    });
+  </script>
+</body>
+</html>
