@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Iz and Chaz – General Services</title>
-  <meta name="description" content="Iz and Chaz – Affordable DIY and handy jobs. From small fixes to day projects. Friendly, local and reliable.">
-  <link rel="canonical" href="https://www.izandchazgeneralservices.org/">
+  <title>Iz and Chaz - General Services | Affordable DIY Help</title>
 
-  <meta property="og:title" content="Iz and Chaz – General Services">
-  <meta property="og:description" content="Don’t worry about your next DIY project – Iz and Chaz are here!">
-  <meta property="og:image" content="https://www.izandchazgeneralservices.org/image0.png">
+  <!-- SEO -->
+  <link rel="canonical" href="https://www.izandchazgeneralservices.org/" />
+  <meta name="description" content="Iz and Chaz - General Services. Affordable help with small DIY and handy jobs. Friendly, reliable, and local. Message us for a quote." />
+  <meta name="robots" content="index,follow" />
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Iz and Chaz - General Services" />
+  <meta property="og:description" content="Don’t worry about your next DIY project — Iz and Chaz are here!" />
+  <meta property="og:url" content="https://www.izandchazgeneralservices.org/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.izandchazgeneralservices.org/image0.png" />
+
+  <meta name="theme-color" content="#1e6cff" />
+  <link rel="icon" href="image0.png" />
+
+  <!-- LocalBusiness structured data (helps Google understand your business) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -22,144 +32,694 @@
     "email":"izandchazgs@icloud.com",
     "sameAs":[
       "https://www.facebook.com/share/1CVQQvr68k/?mibextid=wwXIfr"
-    ]
+    ],
+    "description":"Affordable help with small DIY and handy jobs."
   }
   </script>
 
   <style>
     :root{
+      /* Brand colours inspired by your logo: Iz (blue) + Chaz (orange) */
       --blue:#1e6cff;
       --blue-dark:#144bb3;
       --orange:#ff8a00;
       --orange-dark:#d96f00;
+
       --bg:#f7f9fc;
+      --panel:#ffffff;
       --text:#0d1b2a;
       --muted:#4a5d73;
       --border:rgba(30,108,255,.18);
       --shadow:0 12px 30px rgba(0,0,0,.12);
       --radius:18px;
+      --radius-sm:12px;
     }
 
-    *{box-sizing:border-box}
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
     body{
       margin:0;
-      font-family:Arial, sans-serif;
-      color:var(--text);
-      background:#fff;
-    }
-    .container{
-      max-width:1100px;
-      margin:auto;
-      padding:0 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.6;
     }
 
-    header{
-      background:linear-gradient(135deg,var(--blue-dark),var(--blue));
-      color:white;
-      padding:20px 0 14px;
+    .container{
+      width: min(1100px, 100%);
+      margin: 0 auto;
+      padding: 0 20px;
     }
+
+    /* Header scrolls normally (NOT sticky) */
+    header{
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+      color: #fff;
+      padding: 18px 0 14px;
+      position: relative;
+      box-shadow: 0 10px 22px rgba(0,0,0,.14);
+    }
+
     .topbar{
       display:flex;
       justify-content:space-between;
       align-items:center;
       flex-wrap:wrap;
-      gap:14px;
+      gap: 14px;
     }
+
     .brand{
       display:flex;
       align-items:center;
-      gap:14px;
+      gap: 14px;
+      min-width: 260px;
     }
+
     .brand img{
-      width:64px;height:64px;
-      object-fit:contain;
-      background:rgba(255,255,255,.15);
-      padding:6px;
-      border-radius:14px;
-      box-shadow:0 8px 20px rgba(0,0,0,.2);
+      width: 68px;
+      height: 68px;
+      object-fit: contain;
+      background: rgba(255,255,255,.16);
+      border: 1px solid rgba(255,255,255,.22);
+      padding: 7px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.18);
     }
-    nav a{
-      color:white;
+
+    .brand h1{
+      margin:0;
+      font-size: 1.25rem;
+      letter-spacing: .2px;
+      line-height: 1.2;
+    }
+    .brand p{
+      margin:4px 0 0;
+      opacity: .92;
+      font-size: .95rem;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-end;
+    }
+
+    .navlink{
+      color: #fff;
       text-decoration:none;
-      font-weight:bold;
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.25);
-      background:rgba(255,255,255,.1);
-      margin-left:6px;
+      font-weight: 800;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.22);
+      font-size: .95rem;
     }
-    nav a:hover{background:rgba(255,255,255,.2)}
+    .navlink:hover{
+      background: rgba(255,255,255,.18);
+    }
 
+    .contact-row{
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+      margin-top: 12px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.22);
+      color: #fff;
+      text-decoration:none;
+      font-weight: 700;
+      font-size: .95rem;
+      white-space: nowrap;
+    }
+    .pill:hover{ background: rgba(255,255,255,.18); }
+
+    /* Hero */
     .hero{
-      background:var(--bg);
-      padding:40px 0;
+      background:
+        radial-gradient(900px 420px at 15% 0%, rgba(30,108,255,.12), transparent 55%),
+        radial-gradient(900px 420px at 85% 15%, rgba(255,138,0,.10), transparent 55%),
+        var(--bg);
+      padding: 40px 0 28px;
+      border-bottom: 1px solid var(--border);
     }
+
     .hero-card{
-      background:white;
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:28px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 18px;
+      align-items:center;
     }
 
-    section{padding:60px 0}
-    h2{color:var(--blue-dark)}
+    .hero h2{
+      margin:0 0 10px;
+      font-size: 1.9rem;
+      color: var(--blue-dark);
+      letter-spacing:.2px;
+    }
+    .hero p{
+      margin:0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
 
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+      justify-content:flex-end;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      font-weight: 900;
+      text-decoration:none;
+      cursor:pointer;
+      border: 2px solid transparent;
+    }
+    .btn-primary{
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      color:#fff;
+      box-shadow: 0 12px 22px rgba(255,138,0,.22);
+    }
+    .btn-primary:hover{ filter: brightness(.97); }
+
+    .btn-ghost{
+      background: transparent;
+      color: var(--blue-dark);
+      border-color: rgba(20,75,179,.25);
+    }
+    .btn-ghost:hover{
+      background: rgba(30,108,255,.08);
+    }
+
+    /* Sections */
+    section{
+      padding: 54px 0;
+    }
+    .section-title{
+      margin:0 0 12px;
+      font-size: 1.85rem;
+      color: var(--blue-dark);
+    }
+    .section-sub{
+      margin:0 0 18px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* Panels */
     .panel{
-      background:white;
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:24px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items:start;
+    }
+
+    /* Services */
+    .intro-block{
+      background: linear-gradient(135deg, rgba(30,108,255,.10), rgba(255,138,0,.08));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+    .intro-block h3{
+      margin: 0 0 8px;
+      color: var(--blue-dark);
+      font-size: 1.2rem;
+    }
+    .intro-block p{
+      margin:0;
+      color: var(--muted);
     }
 
     .cards{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:20px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
     }
 
     .card{
-      background:white;
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:22px;
-      position:relative;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      position: relative;
+      overflow: hidden;
+      min-height: 220px;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
     }
+
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(0,0,0,.12);
+      border-color: rgba(30,108,255,.30);
+    }
+
     .card::before{
       content:"";
       position:absolute;
-      top:0;left:0;right:0;
+      top:0; left:0; right:0;
       height:6px;
-      background:linear-gradient(90deg,var(--blue),var(--orange));
-    }
-    .price{
-      font-size:2rem;
-      font-weight:900;
-      color:var(--orange);
+      background: linear-gradient(90deg, var(--blue), var(--orange));
     }
 
+    .card-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .service-name{
+      margin:0;
+      font-size: 1.2rem;
+      color: var(--blue-dark);
+      font-weight: 900;
+    }
+
+    .icon{
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display:grid;
+      place-items:center;
+      background: rgba(30,108,255,.10);
+      border: 1px solid rgba(30,108,255,.18);
+      flex: 0 0 auto;
+    }
+    .icon svg{
+      width: 22px;
+      height: 22px;
+      stroke: var(--blue-dark);
+    }
+
+    /* Price stands out */
+    .price{
+      margin: 12px 0 8px;
+      font-size: 2rem;
+      font-weight: 1000;
+      color: var(--orange);
+      letter-spacing: .2px;
+      line-height: 1.1;
+      text-shadow: 0 1px 0 rgba(0,0,0,.06);
+    }
+
+    .desc{
+      margin:0;
+      color: var(--muted);
+      font-weight: 700;
+      line-height: 1.55;
+    }
+
+    .tag{
+      display:inline-block;
+      margin-top: 12px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,138,0,.12);
+      border: 1px solid rgba(255,138,0,.18);
+      color: var(--orange-dark);
+      font-weight: 900;
+      font-size: .9rem;
+    }
+
+    /* Contact */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 14px;
+      align-items:start;
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    input, textarea{
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(20,75,179,.22);
+      font-size: 1rem;
+      outline:none;
+      width:100%;
+      background:#fff;
+    }
+
+    input:focus, textarea:focus{
+      border-color: rgba(255,138,0,.45);
+      box-shadow: 0 0 0 4px rgba(255,138,0,.14);
+    }
+
+    textarea{ resize: vertical; min-height: 140px; }
+
+    .form-btn{
+      padding: 12px 16px;
+      border-radius: 14px;
+      border: none;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      color: #fff;
+      font-weight: 1000;
+      cursor:pointer;
+      box-shadow: 0 12px 22px rgba(30,108,255,.18);
+    }
+    .form-btn:hover{ filter: brightness(.97); }
+
+    .success{
+      display:none;
+      margin-top: 10px;
+      font-weight: 900;
+      color: var(--blue-dark);
+    }
+
+    /* Facebook button */
+    .social a{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      text-decoration:none;
+      padding: 12px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-weight: 900;
+    }
+    .social a:hover{ background: rgba(30,108,255,.08); }
+    .social .fb-icon{
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display:grid;
+      place-items:center;
+      background: rgba(30,108,255,.12);
+      border: 1px solid rgba(30,108,255,.18);
+    }
+    .social svg{ width: 22px; height: 22px; stroke: var(--blue-dark); }
+
+    /* Footer */
     footer{
-      background:var(--blue-dark);
-      color:white;
+      margin-top: 10px;
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+      color: #fff;
+      padding: 26px 0;
       text-align:center;
-      padding:28px 0;
+    }
+    footer a{ color:#fff; font-weight:900; text-decoration:none; }
+    footer a:hover{ text-decoration:underline; }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-card{ grid-template-columns: 1fr; }
+      .cta-row{ justify-content:flex-start; }
+      .two-col{ grid-template-columns: 1fr; }
+      .cards{ grid-template-columns: repeat(2, 1fr); }
+      .contact-grid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px){
+      .cards{ grid-template-columns: 1fr; }
+      .brand{ min-width:auto; }
     }
   </style>
 </head>
 
 <body>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="topbar">
+        <div class="brand">
+          <!-- Logo must be in same folder as index.html named image0.png -->
+          <img src="image0.png" alt="Iz and Chaz - General Services logo" />
+          <div>
+            <h1>Iz and Chaz - General Services</h1>
+            <p>Affordable DIY & handy jobs • Friendly • Reliable</p>
+          </div>
+        </div>
 
-<header>
-  <div class="container topbar">
-    <div class="brand">
-      <img src="image0.png" alt="Iz and Chaz logo">
-      <div>
-        <h1>Iz and Chaz – General Services</h1>
+        <nav aria-label="Primary navigation">
+          <a class="navlink" href="#about">About</a>
+          <a class="navlink" href="#services">Services</a>
+          <a class="navlink" href="#contact">Contact</a>
+          <a class="navlink" href="https://www.facebook.com/share/1CVQQvr68k/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
+        </nav>
+      </div>
+
+      <div class="contact-row" aria-label="Quick contact">
+        <a class="pill" href="mailto:izandchazgs@icloud.com">✉️ izandchazgs@icloud.com</a>
+        <a class="pill" href="tel:+447496846263">📞 07496846263</a>
       </div>
     </div>
+  </header>
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <a
+  <!-- HERO -->
+  <div class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <div>
+          <h2>Welcome to Iz and Chaz - General Services!</h2>
+          <p>
+            Don’t worry about your next DIY project — Iz and Chaz are here!
+            Whether it’s putting up hooks for photo frames, building your kid’s playhouse,
+            or putting in a new garden fence, we can help. Just message us directly and we can sort you out!
+          </p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Message Us</a>
+          <a class="btn btn-ghost" href="#services">See Prices</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <div class="panel">
+        <p class="section-sub" style="margin:0;">
+          Hello! We are Izzi and Charlie, two youngsters with a dream to have our own company. At the moment we are limited
+          to small DIY jobs, but strive to improve our variety of skills in the next few years to become a business that can
+          offer carpentry too, and possibly electrical and plumbing skills. We hope to be a fully functional company in the
+          first few weeks of the new year, with our prices being low and affordable for people who need little handy jobs done!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Explore what we offer</h2>
+
+      <div class="intro-block">
+        <h3>Don’t worry about your next DIY project, Iz and Chaz are here!</h3>
+        <p>
+          Whether it’s putting up hooks for photo frames, building your kid’s playhouse, or putting in a new garden fence.
+          We can help! Just message us directly and we can sort you out!
+        </p>
+      </div>
+
+      <div class="cards" aria-label="Service pricing list">
+        <!-- Basic -->
+        <article class="card">
+          <div class="card-top">
+            <div>
+              <h3 class="service-name">Basic Service</h3>
+            </div>
+            <div class="icon" aria-hidden="true" title="Basic">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <path d="M14 7l3 3-9.5 9.5a2.1 2.1 0 0 1-3-3L14 7z"></path>
+                <path d="M16 5a4 4 0 0 0-5.7 5.7"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="price">£20</div>
+          <p class="desc">Small Jobs: approx 25–45 mins completion time</p>
+          <span class="tag">Quick & simple</span>
+        </article>
+
+        <!-- Intermediate -->
+        <article class="card">
+          <div class="card-top">
+            <div>
+              <h3 class="service-name">Intermediate Service</h3>
+            </div>
+            <div class="icon" aria-hidden="true" title="Intermediate">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <path d="M16 4l4 4-3 3-4-4 3-3z"></path>
+                <path d="M11 10l-6 6"></path>
+                <path d="M4 20l6-6"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="price">£40</div>
+          <p class="desc">Casual Jobs: Completion time approx 45–90 mins</p>
+          <span class="tag">Most common</span>
+        </article>
+
+        <!-- Advanced -->
+        <article class="card">
+          <div class="card-top">
+            <div>
+              <h3 class="service-name">Advanced Service</h3>
+            </div>
+            <div class="icon" aria-hidden="true" title="Advanced">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <path d="M3 7h18v12H3z"></path>
+                <path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="price">£65</div>
+          <p class="desc">Difficult Jobs: Completion time 90–120 mins</p>
+          <span class="tag">Bigger jobs</span>
+        </article>
+
+        <!-- Advanced+ -->
+        <article class="card">
+          <div class="card-top">
+            <div>
+              <h3 class="service-name">Advanced+ Service</h3>
+            </div>
+            <div class="icon" aria-hidden="true" title="Advanced+">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <path d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4z"></path>
+                <path d="M8.5 12.5l2.5 2.5 5-6"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="price">£100</div>
+          <p class="desc">Day Jobs: Completion time 120–180 mins</p>
+          <span class="tag">Longest jobs</span>
+        </article>
+      </div>
+
+      <p class="section-sub" style="margin-top:16px;">
+        Not sure which service suits your job? Send us a message with a quick description (and a photo if possible) and we’ll advise.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">Send us a message and we’ll get back to you as soon as we can.</p>
+
+      <div class="contact-grid">
+        <div class="panel">
+          <strong>Message us</strong>
+
+          <form id="contactForm" action="https://formspree.io/f/mbdjwkeq" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="_replyto" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message (what you need + area/postcode if possible)" required></textarea>
+            <button class="form-btn" type="submit">Send Message</button>
+            <div id="successMessage" class="success">Thank you! Your message has been sent.</div>
+          </form>
+
+          <p class="section-sub" style="margin-top:16px;">
+            Email: <a href="mailto:izandchazgs@icloud.com">izandchazgs@icloud.com</a><br>
+            Phone: <a href="tel:+447496846263">07496846263</a>
+          </p>
+        </div>
+
+        <div class="panel social">
+          <strong>Facebook</strong>
+          <p class="section-sub" style="margin-top:8px;">
+            Page: <strong>Iz and Chaz - General Services</strong>
+          </p>
+
+          <a href="https://www.facebook.com/share/1CVQQvr68k/?mibextid=wwXIfr" target="_blank" rel="noopener">
+            <span class="fb-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v3H8v3h3v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1z"></path>
+              </svg>
+            </span>
+            Open our Facebook page
+          </a>
+
+          <p class="section-sub" style="margin-top:12px;">
+            If you message us on Facebook, include a photo of the job if you can.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>
+        © 2025 Iz and Chaz - General Services •
+        <a href="mailto:izandchazgs@icloud.com">izandchazgs@icloud.com</a> •
+        <a href="tel:+447496846263">07496846263</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Formspree submit (stays on page)
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then((response) => {
+        if (response.ok) {
+          form.reset();
+          successMessage.style.display = 'block';
+          setTimeout(() => { successMessage.style.display = 'none'; }, 6000);
+        } else {
+          alert('Oops! There was a problem submitting your form.');
+        }
+      })
+      .catch(() => {
+        alert('Oops! There was a problem submitting your form.');
+      });
+    });
+  </script>
+</body>
+</html>
