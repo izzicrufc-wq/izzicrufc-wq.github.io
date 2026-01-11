@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Iz and Chaz - General Services | Affordable DIY Help</title>
+  <title>Iz and Chaz – General Services</title>
+  <meta name="description" content="Iz and Chaz – Affordable DIY and handy jobs. From small fixes to day projects. Friendly, local and reliable.">
+  <link rel="canonical" href="https://www.izandchazgeneralservices.org/">
 
-  <link rel="canonical" href="https://www.izandchazgeneralservices.org/" />
-  <meta name="description" content="Iz and Chaz - General Services. Affordable help with small DIY and handy jobs. Message us for a quote." />
-  <meta name="robots" content="index,follow" />
-
-  <meta property="og:title" content="Iz and Chaz - General Services" />
-  <meta property="og:description" content="Don’t worry about your next DIY project — Iz and Chaz are here!" />
-  <meta property="og:url" content="https://www.izandchazgeneralservices.org/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://www.izandchazgeneralservices.org/image0.png" />
-
-  <link rel="icon" href="image0.png" />
+  <meta property="og:title" content="Iz and Chaz – General Services">
+  <meta property="og:description" content="Don’t worry about your next DIY project – Iz and Chaz are here!">
+  <meta property="og:image" content="https://www.izandchazgeneralservices.org/image0.png">
 
   <script type="application/ld+json">
   {
@@ -28,201 +22,126 @@
     "email":"izandchazgs@icloud.com",
     "sameAs":[
       "https://www.facebook.com/share/1CVQQvr68k/?mibextid=wwXIfr"
-    ],
-    "description":"Affordable help with small DIY and handy jobs."
+    ]
   }
   </script>
 
   <style>
     :root{
-      /* Brand colours from logo */
-      --brand-blue:#1e6cff;
-      --brand-blue-dark:#144bb3;
-      --brand-orange:#ff8a00;
-      --brand-orange-dark:#d96f00;
-
-      --white:#ffffff;
-      --offwhite:#f7f9fc;
+      --blue:#1e6cff;
+      --blue-dark:#144bb3;
+      --orange:#ff8a00;
+      --orange-dark:#d96f00;
+      --bg:#f7f9fc;
       --text:#0d1b2a;
       --muted:#4a5d73;
-      --border:rgba(30,108,255,0.18);
-      --shadow:0 10px 30px rgba(0,0,0,0.10);
+      --border:rgba(30,108,255,.18);
+      --shadow:0 12px 30px rgba(0,0,0,.12);
       --radius:18px;
     }
 
-    *{ box-sizing:border-box; }
-    html{ scroll-behavior:smooth; }
+    *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--white);
-      color: var(--text);
-      line-height:1.6;
+      font-family:Arial, sans-serif;
+      color:var(--text);
+      background:#fff;
     }
-
     .container{
-      width:min(1050px, 100%);
-      margin:0 auto;
-      padding:0 18px;
+      max-width:1100px;
+      margin:auto;
+      padding:0 20px;
     }
 
     header{
-      background: linear-gradient(135deg, var(--brand-blue-dark), var(--brand-blue));
-      color: var(--white);
-      padding: 18px 0 14px;
-      position: relative;
+      background:linear-gradient(135deg,var(--blue-dark),var(--blue));
+      color:white;
+      padding:20px 0 14px;
     }
-
     .topbar{
       display:flex;
-      align-items:center;
       justify-content:space-between;
-      gap:16px;
+      align-items:center;
       flex-wrap:wrap;
+      gap:14px;
     }
-
     .brand{
       display:flex;
       align-items:center;
       gap:14px;
-      min-width: 240px;
     }
-
     .brand img{
-      width:64px;
-      height:64px;
+      width:64px;height:64px;
       object-fit:contain;
-      border-radius:14px;
-      background: rgba(255,255,255,0.15);
+      background:rgba(255,255,255,.15);
       padding:6px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+      border-radius:14px;
+      box-shadow:0 8px 20px rgba(0,0,0,.2);
     }
-
-    .brand h1{
-      margin:0;
-      font-size: 1.25rem;
-    }
-
-    nav{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-
-    .navlink{
+    nav a{
+      color:white;
       text-decoration:none;
-      color:var(--white);
-      padding:10px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.25);
-      background: rgba(255,255,255,0.10);
-      font-weight:700;
-      font-size: 0.95rem;
-    }
-
-    .navlink:hover{
-      background: rgba(255,255,255,0.20);
-    }
-
-    .contact-pill{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:12px;
-    }
-
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
+      font-weight:bold;
+      padding:10px 14px;
       border-radius:999px;
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.25);
-      text-decoration:none;
-      font-weight:600;
-      font-size:0.95rem;
-      color:var(--white);
+      border:1px solid rgba(255,255,255,.25);
+      background:rgba(255,255,255,.1);
+      margin-left:6px;
     }
+    nav a:hover{background:rgba(255,255,255,.2)}
 
     .hero{
-      background: var(--offwhite);
-      padding: 34px 0 26px;
-      border-bottom: 1px solid var(--border);
+      background:var(--bg);
+      padding:40px 0;
     }
-
     .hero-card{
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 22px;
+      background:white;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px;
     }
 
-    section{
-      padding: 44px 0;
-    }
+    section{padding:60px 0}
+    h2{color:var(--blue-dark)}
 
-    .section-title{
-      margin:0 0 10px;
-      font-size: 1.75rem;
-      color: var(--brand-blue-dark);
-    }
-
-    .services-wrap{
-      display:grid;
-      gap:16px;
-    }
-
-    .intro-block{
-      background: var(--offwhite);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px;
+    .panel{
+      background:white;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:24px;
     }
 
     .cards{
       display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap:14px;
-    }
-
-    @media (max-width: 980px){
-      .cards{ grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 560px){
-      .cards{ grid-template-columns: 1fr; }
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:20px;
     }
 
     .card{
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 18px;
-      min-height: 170px;
+      background:white;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:22px;
+      position:relative;
     }
-
-    .service-name{
-      margin:0;
-      font-size:1.2rem;
-      color: var(--brand-blue-dark);
+    .card::before{
+      content:"";
+      position:absolute;
+      top:0;left:0;right:0;
+      height:6px;
+      background:linear-gradient(90deg,var(--blue),var(--orange));
     }
-
     .price{
-      margin: 10px 0 8px;
-      font-size: 1.8rem;
-      font-weight: 900;
-      color: var(--brand-orange);
+      font-size:2rem;
+      font-weight:900;
+      color:var(--orange);
     }
 
     footer{
-      padding: 28px 0;
-      background: var(--brand-blue-dark);
-      color: white;
+      background:var(--blue-dark);
+      color:white;
       text-align:center;
+      padding:28px 0;
     }
   </style>
 </head>
@@ -230,97 +149,17 @@
 <body>
 
 <header>
-  <div class="container">
-    <div class="topbar">
-      <div class="brand">
-        <img src="image0.png" alt="Iz and Chaz logo" />
-        <div>
-          <h1>Iz and Chaz - General Services</h1>
-        </div>
-      </div>
-
-      <nav>
-        <a class="navlink" href="#services">Services</a>
-        <a class="navlink" href="#about">About</a>
-        <a class="navlink" href="#contact">Contact</a>
-        <a class="navlink" href="https://www.facebook.com/share/1CVQQvr68k/?mibextid=wwXIfr" target="_blank">Facebook</a>
-      </nav>
-    </div>
-
-    <div class="contact-pill">
-      <a class="pill" href="mailto:izandchazgs@icloud.com">✉️ izandchazgs@icloud.com</a>
-      <a class="pill" href="tel:+447496846263">📞 07496846263</a>
-    </div>
-  </div>
-</header>
-
-<div class="hero">
-  <div class="container">
-    <div class="hero-card">
-      <h2>Welcome to Iz and Chaz - General Services!</h2>
-      <p>
-        Don’t worry about your next DIY project — we’re here to help.
-        From hooks and shelves to playhouses and garden fences, just message us and we’ll sort you out!
-      </p>
-    </div>
-  </div>
-</div>
-
-<section id="about">
-  <div class="container">
-    <h2 class="section-title">About Us</h2>
-    <p>
-      Hello! We are Izzi and Charlie, two youngsters with a dream to have our own company.
-      At the moment we are limited to small DIY jobs, but strive to improve our skills in the next few years
-      to offer carpentry and possibly electrical and plumbing work.
-    </p>
-  </div>
-</section>
-
-<section id="services">
-  <div class="container">
-    <h2 class="section-title">Explore what we offer</h2>
-
-    <div class="services-wrap">
-      <div class="intro-block">
-        <p>
-          Whether it’s hooks, shelves, playhouses or fences — we can help.
-          Just message us directly and we’ll sort you out!
-        </p>
-      </div>
-
-      <div class="cards">
-        <div class="card">
-          <h3 class="service-name">Basic Service</h3>
-          <div class="price">£20</div>
-          <p>Small Jobs – 25–45 mins</p>
-        </div>
-
-        <div class="card">
-          <h3 class="service-name">Intermediate Service</h3>
-          <div class="price">£40</div>
-          <p>Casual Jobs – 45–90 mins</p>
-        </div>
-
-        <div class="card">
-          <h3 class="service-name">Advanced Service</h3>
-          <div class="price">£65</div>
-          <p>Difficult Jobs – 90–120 mins</p>
-        </div>
-
-        <div class="card">
-          <h3 class="service-name">Advanced+ Service</h3>
-          <div class="price">£100</div>
-          <p>Day Jobs – 120–180 mins</p>
-        </div>
+  <div class="container topbar">
+    <div class="brand">
+      <img src="image0.png" alt="Iz and Chaz logo">
+      <div>
+        <h1>Iz and Chaz – General Services</h1>
       </div>
     </div>
-  </div>
-</section>
 
-<footer>
-  <p>&copy; 2025 Iz and Chaz - General Services</p>
-</footer>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a
 
-</body>
-</html>
